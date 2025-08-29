@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empire Data — powered by Empire Meters</title>
+  <meta name="description" content="Independent water usage reporting, leak & tamper alerts, compliance audits, and equipment supply. California licensed contractor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="wordmark">Empire</span>
+        <div class="brand-text">
+          <div class="brand-top">Empire Data</div>
+          <div class="brand-sub">powered by Empire Meters</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#meters">Empire Meters</a>
+        <a href="#data">Empire Data</a>
+        <a href="#audit">Compliance Audit</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Collecting the data that counts.</h1>
+        <p class="lead">Independent reporting, preventive audits, and compliance insights for property managers, owners, and developers. We do <strong>not</strong> bill tenants.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#audit">Book a Compliance Audit</a>
+          <a class="btn btn-outline" href="#data">See Data Plans</a>
+        </div>
+        <div class="badges">
+          <span class="badge">CA Licensed (CSLB #1067023)</span>
+          <span class="badge">Service Agency #4037</span>
+          <span class="badge">Independent Reporting</span>
+          <span class="badge">Local & Responsive</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="meters" class="section">
+      <div class="container">
+        <h2>Empire Meters — Installs & Service</h2>
+        <div class="grid">
+          <div class="card"><h3>Install & Retrofit</h3><p>Cold-only or Cold+Hot meters; new installs & retrofits.</p></div>
+          <div class="card"><h3>Wireless AMR/AMI</h3><p>Provisioning (NextCentury & others), surveys, gateway/repeater layout.</p></div>
+          <div class="card"><h3>Service & Troubleshooting</h3><p>No-reads, leak/tamper, outages; diagnostics & remediation.</p></div>
+          <div class="card"><h3>Compliance Audits</h3><p>CA Weights & Measures alignment, documentation, prioritized fixes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="data" class="section alt">
+      <div class="container">
+        <h2>Empire Data — Reporting & Analytics</h2>
+        <p class="muted">Independent usage reporting that works with any billing provider. We do not bill tenants.</p>
+        <div class="plans">
+          <div class="plan">
+            <div class="plan-name">Basic</div>
+            <div class="plan-price">$1–$2 <span>/ unit / month</span></div>
+            <ul>
+              <li>Monthly unit + common reads</li>
+              <li>PDF/Excel reports</li>
+              <li>Flags no-reads/offline</li>
+            </ul>
+          </div>
+          <div class="plan featured">
+            <div class="plan-name">Pro — Leak & Preventive Alerts</div>
+            <div class="plan-price">$2–$3 <span>/ unit / month</span></div>
+            <ul>
+              <li>Everything in Basic</li>
+              <li>Leak & tamper alerts</li>
+              <li><strong>Gasket checks</strong> during audits (replace ~5 years or sooner)</li>
+              <li>Preventive reminders</li>
+            </ul>
+          </div>
+          <div class="plan">
+            <div class="plan-name">Enterprise — Analytics</div>
+            <div class="plan-price">$3–$4 <span>/ unit / month</span></div>
+            <ul>
+              <li>Everything in Pro</li>
+              <li>Portfolio benchmarking</li>
+              <li>Quarterly compliance snapshots</li>
+              <li>Trends & investor-ready insights</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta-center"><a class="btn btn-primary" href="#schedule">Request a Data Proposal</a></div>
+      </div>
+    </section>
+
+    <section id="audit" class="section">
+      <div class="container">
+        <h2>Compliance & Preventive Audits (Second Opinion)</h2>
+        <p>We inspect installation quality, orientation, endpoint/gateway health, read success, and leak/tamper anomalies. We also assess <strong>gasket condition</strong> — a leading cause of leaks — and recommend proactive replacement about every 5 years (earlier in harsh water) to prevent damage.</p>
+        <a class="btn btn-outline" href="#schedule">Book an Audit</a>
+      </div>
+    </section>
+
+    <section id="equipment" class="section alt">
+      <div class="container">
+        <h2>Equipment & DIY Kits</h2>
+        <p>Submeters, wireless AMR components, leak sensors, and accessories. CA and out-of-state variants available. Optional pre-programmed DIY kits with unit labels and remote verification.</p>
+
+        <div class="equip-grid">
+          <div class="equip-card">
+            <div class="equip-title">NextMeter Indoor Ultrasonic 3/4”</div>
+            <div class="equip-sub">SKU: NEXT NM4-I</div>
+            <div class="equip-desc">Indoor ultrasonic submeter; ideal for unit installs. CA variant available.</div>
+            <div class="equip-cta">
+              <input class="input" name="sku" value="NEXT NM4-I" />
+              <input class="input" name="qty" type="number" min="1" value="1" />
+              <select class="input" name="region"><option>California Use</option><option>Out of State</option></select>
+              <button class="btn btn-primary" onclick="emailQuote(this)">Email Quote</button>
+            </div>
+          </div>
+
+          <div class="equip-card">
+            <div class="equip-title">NextCentury TR4 Transceiver</div>
+            <div class="equip-sub">SKU: NC TR4</div>
+            <div class="equip-desc">Compact endpoint transceiver for AMR/AMI networks.</div>
+            <div class="equip-cta">
+              <input class="input" name="sku" value="NC TR4" />
+              <input class="input" name="qty" type="number" min="1" value="1" />
+              <select class="input" name="region"><option>California Use</option><option>Out of State</option></select>
+              <button class="btn btn-primary" onclick="emailQuote(this)">Email Quote</button>
+            </div>
+          </div>
+
+          <div class="equip-card">
+            <div class="equip-title">NextCentury Gateway GW4</div>
+            <div class="equip-sub">SKU: NC GW4</div>
+            <div class="equip-desc">Secure AMR/AMI gateway with portfolio reporting.</div>
+            <div class="equip-cta">
+              <input class="input" name="sku" value="NC GW4" />
+              <input class="input" name="qty" type="number" min="1" value="1" />
+              <select class="input" name="region"><option>California Use</option><option>Out of State</option></select>
+              <button class="btn btn-primary" onclick="emailQuote(this)">Email Quote</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section">
+      <div class="container">
+        <h2>Schedule Service or Request a Proposal</h2>
+        <form class="form" onsubmit="return sendScheduleEmail(this)">
+          <div class="grid2">
+            <input class="input" name="name" placeholder="Your Name *" required />
+            <input class="input" name="company" placeholder="Company" />
+            <input class="input" name="email" type="email" placeholder="Email *" required />
+            <input class="input" name="phone" placeholder="Phone" />
+            <input class="input grid-span" name="address" placeholder="Property Address" />
+            <select class="input" name="type">
+              <option>Install</option>
+              <option>Retrofit</option>
+              <option>Maintenance</option>
+              <option>Troubleshooting</option>
+              <option>Compliance Audit</option>
+              <option>Data Reporting</option>
+            </select>
+            <input class="input" name="datetime" type="datetime-local" />
+            <select class="input" name="vendor">
+              <option>NextCentury</option>
+              <option>Itron</option>
+              <option>Metron</option>
+              <option>Other</option>
+            </select>
+            <select class="input" name="setup">
+              <option>Cold Only</option>
+              <option>Cold + Hot</option>
+            </select>
+            <input class="input" name="units" type="number" min="1" placeholder="# of Units" />
+            <textarea class="input grid-span" name="notes" rows="4" placeholder="Notes (issues, timelines, goals)"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit Request</button>
+          <div id="form-msg" class="form-msg"></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p><strong>Sergio Anguiano</strong> — Field Operations Manager<br/>
+           <strong>Brittany Ward</strong> — Office Compliance Manager</p>
+        <p>📧 sanguiano@empiremeters.com • bward@empiremeters.com<br/>
+           🌐 www.empiremeters.com</p>
+        <p class="muted">Empire Data is powered by Empire Meters. Data-only reporting. We do not bill tenants.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2025 Empire — Empire Data is powered by Empire Meters.</div>
+      <div class="footer-links">
+        <a href="#data">Data Plans</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#schedule">Schedule</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

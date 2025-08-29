@@ -1,0 +1,33 @@
+// Email a quote based on the equipment card inputs
+function emailQuote(btn){
+  const wrap = btn.closest('.equip-cta');
+  const sku = wrap.querySelector('[name=sku]').value || 'SKU';
+  const qty = wrap.querySelector('[name=qty]').value || '1';
+  const region = wrap.querySelector('[name=region]').value || 'California Use';
+  const subject = `Equipment Quote — ${sku} x${qty}`;
+  const body = `SKU: ${sku}\nQuantity: ${qty}\nRegion: ${region}\n`;
+  window.location.href = `mailto:sanguiano@empiremeters.com,bward@empiremeters.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// Schedule form -> prefilled email
+function sendScheduleEmail(form){
+  const data = new FormData(form);
+  const body = [
+    `Name: ${data.get('name')}`,
+    `Company: ${data.get('company')||''}`,
+    `Email: ${data.get('email')}`,
+    `Phone: ${data.get('phone')||''}`,
+    `Address: ${data.get('address')||''}`,
+    `Service Type: ${data.get('type')}`,
+    `Preferred: ${data.get('datetime')||''}`,
+    `AMR/AMI Vendor: ${data.get('vendor')}`,
+    `Meter Setup: ${data.get('setup')}`,
+    `Units: ${data.get('units')||''}`,
+    `Notes: ${data.get('notes')||''}`
+  ].join('\\n');
+  const subject = 'Schedule Service / Proposal Request';
+  window.location.href = `mailto:sanguiano@empiremeters.com,bward@empiremeters.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  document.getElementById('form-msg')?.classList.add('show');
+  document.getElementById('form-msg').textContent = 'Opening your email client... If it didn’t open, email us directly.';
+  return false;
+}
